@@ -1,6 +1,4 @@
 #include <GL/freeglut.h>
-#include <GL/glext.h>
-
 
 float angle = 0.0;
 float angle1 = 0.0;
@@ -41,7 +39,7 @@ void render(void)
 	angle = 12*cos(a);
 	angle1 = 12*sin(a);
 	
-	#include "Stencil_Shadow.h"
+	#include "StencilShadow.h"
 	
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
@@ -60,7 +58,7 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA | GLUT_STENCIL);
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(640, 480);
-	glutCreateWindow("Glut M");
+	glutCreateWindow("Glut");
 	
 	glutReshapeFunc(changeSize);
 	glutDisplayFunc(render);
